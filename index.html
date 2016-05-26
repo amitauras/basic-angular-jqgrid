@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jqGrid</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ui.jqgrid-bootstrap.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/i18n/grid.locale-en.js"></script>
+    <script src="js/lib/jquery.jqGrid.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/scripts/jqGrid.module.js"></script>
+    <script src="js/scripts/grid-config.provider.js"></script>
+    <script src="js/scripts/jqgrid.directive.js"></script>
+    <script src="js/scripts/app.module.js"></script>
+    <script src="js/scripts/grid-config.js"></script>
+    <script src="js/scripts/app.controller.js"></script>
+</head>
+
+<body>
+    <div data-ng-app="app">
+        <div data-ng-controller="appCtrl as vm">
+            <div jd-jq-grid id="main-grid" config="vm.config" gridid="postsgrid" pagerid="postspager" subgrid-config="vm.subgridConfig"></div>
+        </div>
+    </div>
+    <script>
+        $.jgrid.defaults.responsive = true;
+		$.jgrid.defaults.styleUI = 'Bootstrap';
+        $.jgrid.no_legacy_api = true;
+        $.jgrid.useJSON = true;
+    </script>
+
+</body>
+
+</html>

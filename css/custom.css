@@ -1,0 +1,22 @@
+* {
+    border-radius: 0;
+    font-family: 'Roboto'
+}
+
+.ui-jqgrid .ui-jqgrid-bdiv {
+  position: relative; 
+  margin: 0em; 
+  padding:0; 
+  /*overflow: auto;*/ 
+  overflow-x:hidden; 
+  overflow-y:auto; 
+  text-align:left;
+}
+
+.ui-jqgrid .ui-jqgrid-bdiv {
+    width: calc(100% - 2px);
+}
+
+.ui-jqgrid .ui-jqgrid-hdiv {
+    width: calc(100% - 2px);
+}
